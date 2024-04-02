@@ -3,6 +3,16 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+:root {
+    --primary-color: #0abf53;
+    --font-color: rgba(22, 28, 45, 0.7);
+    --bg-color: #fff;
+    --heading-color: #3b3663;
+    --sidebar-bg: #0D1326;
+    --sidebar-icon-color: #e6ebff;
+    --btn-bg: rgba(170, 170, 170, 0.1);
+}
+
 body {
     padding: 40px 40px;
     justify-content: center;
@@ -10,7 +20,7 @@ body {
     grid-template-rows: 1fr auto 1fr;
     align-items: center;
     min-height: 100vh;
-    background-color: #f8f9fa;
+    background-color: var(--bg-color);
     margin: 0;
 }
 
@@ -18,7 +28,7 @@ h1 {
     text-align: center;
     font-size: 40px;
     font-weight: 500;
-    color: #3b3663;
+    color: var(--heading-color);
 }
 
 .wrapper {
@@ -42,29 +52,6 @@ ol {
     padding: 0;
 }
 
-@media (min-width: 576px) {
-    .wrapper {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .wrapper {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .wrapper {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .wrapper {
-        max-width: 1140px;
-    }
-}
 
 .packages-pack {
     max-width: 1000px;
@@ -74,19 +61,12 @@ ol {
     display: flex;
 }
 
-@media (max-width: 991px) {
-    .packages-pack {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 .package  {
     width: 350px;
     margin: 0 10px;
     box-sizing: border-box;
     border: 3px solid #e8e8e8;
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-radius: 7px;
     display: inline-block;
     padding: 40px 25px;
@@ -102,7 +82,7 @@ ol {
 }
 
 .package-name {
-    color: #3b3663;
+    color: var(--heading-color);
     font-size: 30px;
     font-weight: 600;
 }
@@ -110,14 +90,14 @@ ol {
 .package-price {
     margin-top: 7px;
     margin-bottom: 10px;
-    color: rgba(22, 28, 45, 0.7);
+    color: var(--font-color);
 }
 
 .package-trial-period {
     font-size: 0.9rem;
     font-weight: 600;
     padding: 5px 20px 5px 20px;
-    color: #0abf53;
+    color: var(--primary-color);
     border: 1px solid #e4e4e4;
     display: inline-block;
     border-radius: 15px;
@@ -143,36 +123,36 @@ li::before {
     font-family: "FontAwesome";
     content: "\f105";
     font-size: 18px;
-    color: #0abf53;
+    color: var(--primary-color);
     margin-right: 3px;
 }
 
 li {
     margin-bottom: 20px;
     font-size: 17px;
-    color: rgba(22, 28, 45, 0.7);
+    color: var(--font-color);
     opacity: .85;
 }
 
-button.get {
+button.getStarted {
     border: none;
     outline: none;
     font-size: 18px;
     margin-top: 10px;
-    color: #0abf53;
-    background-color: rgba(170, 170, 170, 0.1);
+    color: var(--primary-color);
+    background-color: var(--btn-bg);
     padding: 12px 25px;
     border-radius: 7px;
     cursor: pointer;
 }
 
-button.get:hover {
-    background-color: #0abf53;
-    color: #fff;
+button.getStarted:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
 }
 
 .brilliant {
-    border-color: #0abf53;
+    border-color: var(--primary-color);
 }
 
 .brilliant::before {
@@ -180,7 +160,7 @@ button.get:hover {
     height: 0;
     border-style: solid;
     border-width: 64px 64px 0 0;
-    border-color: #0abf53 transparent transparent transparent;
+    border-color: var(--primary-color) transparent transparent transparent;
     position: absolute;
     left: 0;
     top: 0;
@@ -192,15 +172,15 @@ button.get:hover {
     position: absolute;
     left: 9px;
     top: 9px;
-    text-shadow: 0 0 2px #0abf53;
+    text-shadow: 0 0 2px var(--primary-color);
     font-size: 1.2rem;
     font-family: "FontAwesome";
     content: "\f006";
 }
 
-.brilliant button.get {
-    background-color: #0abf53;
-    color: #fff;
+.brilliant button.getStarted {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
 }
 
 .copyright{
@@ -214,17 +194,24 @@ button.get:hover {
 p {
     font-size: 18px;
     line-height: 28px;
-    color: rgba(22, 28, 45, 0.7);
+    color: var(--font-color);
     opacity: .8;
 }
 
 .copyright p a {
-    color: #3b3663;
+    color: var(--heading-color);
     text-decoration: none;
 }
 
 .copyright p a:hover {
-    color: #0abf53;
+    color: var(--primary-color);
+}
+
+@media (max-width: 991px) {
+    .packages-pack {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 991px){
@@ -274,6 +261,30 @@ p {
     }
 }
 
+@media (min-width: 576px) {
+    .wrapper {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 1140px;
+    }
+}
+
 /* Side Toolbar */
 
 .right-alignment {
@@ -287,12 +298,12 @@ p {
 }
 
 .toggle-right-sidebar span{
-    background-color: #0D1326;
+    background-color: var(--sidebar-bg);
     width: 50px;
     height: 50px;
     line-height: 50px;
     text-align: center;
-    color: #e6ebff;
+    color: var(--sidebar-icon-color);
     border-radius: 50px;
     font-size: 26px;
     cursor: pointer;
@@ -315,7 +326,7 @@ p {
     padding: 40px 5px;
     padding-top: 70px;
     margin-bottom: 70px;
-    background-color: #0D1326;
+    background-color: var(--sidebar-bg);
     border-top-left-radius: 9px;
     border-bottom-left-radius: 9px;
 }
@@ -327,7 +338,7 @@ p {
 
 #sidebar.right-sidebar a{
     display: block;
-    color: #e6ebff;
+    color: var(--sidebar-icon-color);
     text-decoration: none;
     line-height: 24px;
     opacity: .6;
