@@ -348,5 +348,6 @@ p {
         width: 90px;
         height: 325px;
         border-bottom-left-radius: 9px;
+        overflow: hidden;
     }
 }
