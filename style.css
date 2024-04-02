@@ -74,7 +74,7 @@ ol {
     display: flex;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     .packages-pack {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -110,7 +110,7 @@ ol {
 .package-price {
     margin-top: 7px;
     margin-bottom: 10px;
-    color: #3b3663;
+    color: rgba(22, 28, 45, 0.7);
 }
 
 .package-trial-period {
@@ -150,7 +150,7 @@ li::before {
 li {
     margin-bottom: 20px;
     font-size: 17px;
-    color: #3b3663;
+    color: rgba(22, 28, 45, 0.7);
     opacity: .85;
 }
 
@@ -214,8 +214,17 @@ button.get:hover {
 p {
     font-size: 18px;
     line-height: 28px;
-    color: #3b3663;
+    color: rgba(22, 28, 45, 0.7);
     opacity: .8;
+}
+
+.copyright p a {
+    color: #3b3663;
+    text-decoration: none;
+}
+
+.copyright p a:hover {
+    color: #0abf53;
 }
 
 @media (max-width: 991px){
@@ -242,6 +251,9 @@ p {
     }
 }
 @media (max-width: 384px){
+    body {
+        padding: 30px 0px;
+    }
     .package {
         width: 100%;
     }
@@ -329,4 +341,12 @@ p {
 
 #sidebar.right-sidebar span.sidebar-icon {
     display: block;
+}
+
+@media (max-width: 568px) {
+    #right-sidebar, .right-alignment {
+        width: 90px;
+        height: 325px;
+        border-bottom-left-radius: 9px;
+    }
 }
